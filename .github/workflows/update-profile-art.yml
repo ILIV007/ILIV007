@@ -23,23 +23,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Fetch contributions
-        run: python scripts/fetch_contributions.py
-        env:
-          GITHUB_USERNAME: ${{ github.repository_owner }}
-
-      - name: Render contribution heatmap
-        run: python scripts/render_heatmap_svg.py
+      - name: Render knight emblem
+        run: python scripts/make_knight_svg.py iliv-knight.svg ${{ github.repository_owner }}
 
       - name: Render info card
-        run: python scripts/make_info_card.py
+        run: python scripts/make_info_card.py info-card.svg
 
-      - name: Prep knight source & render emblem
-        run: |
-          python scripts/prep_photo.py knight-angled.png || true
-          python scripts/make_knight_svg.py data/prepped.png iliv-knight.svg || true
+      - name: Fetch & render live activity feed
+        run: python scripts/make_activity_feed.py activity-feed.svg
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh profile art [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg info-card.svg iliv-knight.svg"
+          file_pattern: "iliv-knight.svg info-card.svg activity-feed.svg"

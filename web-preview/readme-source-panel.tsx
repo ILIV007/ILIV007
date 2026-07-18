@@ -8,8 +8,8 @@ export function buildReadmeMd(username: string): string {
   const u = username || "ILIV007";
   return `<div align="center">
 
-<h3><code>${u}@github ~ $ ./contributions.sh</code></h3>
-<img src="./contrib-heatmap.svg" width="860" />
+<h3><code>${u}@github ~ $ tail -f activity.log</code></h3>
+<img src="./activity-feed.svg" width="860" />
 
 <br><br>
 

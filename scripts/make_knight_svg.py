@@ -1,95 +1,101 @@
 #!/usr/bin/env python3
 """
-make_knight_svg.py — convert a prepped knight image into a self-typing
-monochrome ASCII SVG.
+make_knight_svg.py — a HAND-DRAWN crusader great helm rendered as a
+self-typing monochrome ASCII SVG.
 
-The prepped image is downsampled to an 80×40 character grid. Each pixel's
-brightness picks a glyph from a density ramp (bright → sparse, dark → dense).
-The image is binarized first so the background is completely clean — only
-the helmet silhouette prints. A morphological "inside" fill keeps the visor
-slit and breath holes from punching holes in the shape.
+The art is authored directly (not image conversion) so the silhouette is
+precise and unmistakable: plumed dome, crusader cross, horizontal eye-slit,
+breath holes, flared gorget. The `whoami` prompt lives INSIDE the SVG.
 
-Each row "types" itself in via a left-to-right SMIL clip wipe with a gold
-cursor riding the edge, staggered top to bottom. Plays once and freezes.
+Each art row types itself in via a left-to-right SMIL clip wipe with a gold
+cursor, staggered top to bottom. Plays once and freezes.
 
 Usage:
-  python scripts/make_knight_svg.py [prepped-image] [output.svg]
+  python scripts/make_knight_svg.py [output.svg] [username]
 
-Defaults: data/prepped.png → iliv-knight.svg
+Defaults: → iliv-knight.svg, username ILIV007
 """
 
 import sys
 from pathlib import Path
-import numpy as np
-from PIL import Image, ImageOps
 
-# --- config ---
-RAMP = " .:-=+*#%@"          # bright (sparse) → dark (dense)
-COLS = 80
-ROWS = 40
-CHAR_W = 4.0
-CHAR_H = 8.0
-W = int(COLS * CHAR_W)       # 320
-H = int(ROWS * CHAR_H)       # 320
-FILL = "#c8b5ff"             # light violet
+# Hand-authored crusader great helm. ONLY the content is written here (no
+# manual padding) — the centering code below pads each row to CANVAS_W so
+# it's always exactly centered. Every row has ODD content width so it
+# centers precisely on column 19 of the 39-wide canvas.
+#
+# Width map:  plume 5,7,5  →  dome 7,11,13,15  →  body 15  →  gorget 19,17
+KNIGHT_LINES = [
+    "~~~~~",            #  0  plume         w=5
+    "~~~~~~~",          #  1  plume         w=7
+    "|||||",            #  2  plume stem    w=5
+    ".-|||-.",          #  3  dome top      w=7
+    ".---|||---.",      #  4  dome          w=11
+    ".----|||----.",    #  5  dome          w=13
+    "/-----|||-----\\", #  6  dome edge     w=15  ← body width starts
+    "|@@@@@@@@@@@@@|",  #  7  body          w=15
+    "|@@@@@@@@@@@@@|",  #  8
+    "|@@@@@@+@@@@@@|",  #  9  cross         w=15  (+ at center)
+    "|@@@@@@+@@@@@@|",  # 10  cross
+    "|@@@@@@@@@@@@@|",  # 11
+    "|@@@@@@@@@@@@@|",  # 12
+    "|@@@@@@@@@@@@@|",  # 13
+    "|@@@@@@@@@@@@@|",  # 14
+    "|=============|",  # 15  EYE SLIT      w=15
+    "|=============|",  # 16  EYE SLIT
+    "|@@@@@@@@@@@@@|",  # 17
+    "|@@@:@@:@@:@@@|",  # 18  breath holes  w=15  (colons at 3,6,9)
+    "|@@@@@@@@@@@@@|",  # 19
+    "|@@@@@@@@@@@@@|",  # 20
+    "\\@@@@@@@@@@@/",   # 21  narrowing     w=13
+    ".---@@@@@@@@@@@---.", # 22  gorget top    w=19  ← flares out
+    "|@@@@@@@@@@@@@@@@@|", # 23  gorget        w=19
+    "|@@@@@@@@@@@@@@@@@|", # 24
+    "|@@@@@@@@@@@@@@@@@|", # 25
+    "\\@@@@@@@@@@@@@@@/", # 26  gorget bottom w=17
+]
+
+CANVAS_W = 39  # ODD — so odd-width rows center exactly
+
+# Center + pad each row to CANVAS_W. Since CANVAS_W is odd and every content
+# row is odd-width, (CANVAS_W - w) is even → left === right → perfect center.
+ART = []
+for r in KNIGHT_LINES:
+    w = len(r)
+    left = (CANVAS_W - w) // 2
+    ART.append(" " * left + r + " " * (CANVAS_W - left - w))
+
+ART_START_ROW = 2  # row 0 = prompt, row 1 = blank
+TOTAL_ROWS = ART_START_ROW + len(ART)
+
+CHAR_W = 10
+CHAR_H = 13
+W = CANVAS_W * CHAR_W       # 400
+H = TOTAL_ROWS * CHAR_H     # 390
+
+FILL = "#c8b5ff"
 BG = "#0d1117"
-CURSOR = "#e3b341"           # knight gold
-THRESH = 140                 # binarization threshold
-INSIDE_R = 1                 # morphological radius
-MIN_DENSE_IDX = 4            # interior uses at least '#' density
-
-
-def build_grid(img_path: str) -> list[str]:
-    img = Image.open(img_path).convert("L")
-    # Resize to grid using nearest-neighbor for crisp edges
-    img = img.resize((COLS, ROWS), Image.Resampling.LANCZOS)
-    arr = np.array(img, dtype=np.float32)
-
-    # 1) Binarize: helmet (0) vs background/feature (255)
-    binary = np.where(arr < THRESH, 0, 255)
-
-    # 2) Morphological "inside" mask: a pixel is inside the helmet if any
-    #    pixel within radius R is black (0).
-    inside = np.zeros((ROWS, COLS), dtype=bool)
-    for y in range(ROWS):
-        for x in range(COLS):
-            y0, y1 = max(0, y - INSIDE_R), min(ROWS, y + INSIDE_R + 1)
-            x0, x1 = max(0, x - INSIDE_R), min(COLS, x + INSIDE_R + 1)
-            if np.any(binary[y0:y1, x0:x1] == 0):
-                inside[y, x] = True
-
-    # 3) Map to ramp
-    rows: list[str] = []
-    for y in range(ROWS):
-        line = ""
-        for x in range(COLS):
-            if not inside[y, x]:
-                line += RAMP[0]  # background → blank
-            else:
-                b = arr[y, x]
-                t = (255 - b) / 255.0
-                t = t ** 0.5  # strong push toward dense
-                idx = min(len(RAMP) - 1, int(t * (len(RAMP) - 1) + 0.5))
-                if idx < MIN_DENSE_IDX:
-                    idx = MIN_DENSE_IDX
-                line += RAMP[idx]
-        rows.append(line)
-    return rows
+CURSOR = "#e3b341"
+PURPLE = "#bc8cff"
+MUTED = "#8b949e"
+FG = "#c9d1d9"
 
 
 def esc(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def make_svg(rows: list[str]) -> str:
-    row_stagger = 0.028
-    row_dur = 0.32
-    start_delay = 0.15
+def make_svg(username: str = "ILIV007") -> str:
+    user = "".join(c for c in username if c not in '<>"')[:24]
+
+    row_stagger = 0.04
+    row_dur = 0.3
+    start_delay = 0.2
 
     clips, texts, cursors = [], [], []
-    for r, line in enumerate(rows):
+    for r, line in enumerate(ART):
         begin = f"{start_delay + r * row_stagger:.3f}"
-        y = r * CHAR_H
+        y = (ART_START_ROW + r) * CHAR_H
         clips.append(
             f'<clipPath id="ke{r}"><rect x="0" y="{y:.2f}" width="0" '
             f'height="{CHAR_H:.2f}"><animate attributeName="width" '
@@ -104,7 +110,7 @@ def make_svg(rows: list[str]) -> str:
         )
         cx_end = W - 2
         cursors.append(
-            f'<rect x="0" y="{y + 1:.2f}" width="2.4" height="{CHAR_H - 2:.2f}" '
+            f'<rect x="0" y="{y + 1:.2f}" width="3" height="{CHAR_H - 2:.2f}" '
             f'fill="{CURSOR}" opacity="0"><animate attributeName="x" '
             f'from="0" to="{cx_end}" begin="{begin}s" dur="{row_dur}s" '
             f'fill="freeze" calcMode="spline" keyTimes="0;1" '
@@ -113,29 +119,36 @@ def make_svg(rows: list[str]) -> str:
             f'dur="{row_dur}s" fill="freeze"/></rect>'
         )
 
+    prompt_y = 1.5
+    prompt = (
+        f'<text x="0" y="{prompt_y:.2f}" font-size="13">'
+        f'<tspan fill="{PURPLE}">{esc(user)}@github</tspan>'
+        f'<tspan fill="{MUTED}"> ~ $ </tspan>'
+        f'<tspan fill="{FG}">whoami</tspan>'
+        f'<tspan fill="{CURSOR}"> _</tspan></text>'
+    )
+
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
   <rect width="{W}" height="{H}" fill="{BG}"/>
+  {prompt}
   <defs>
     {chr(10).join("    " + c for c in clips)}
   </defs>
-  <g font-size="8" fill="{FILL}" dominant-baseline="hanging" shape-rendering="crispEdges">
+  <g font-size="12" fill="{FILL}" dominant-baseline="hanging" shape-rendering="crispEdges">
     {chr(10).join("    " + t for t in texts)}
   </g>
   <g>
     {chr(10).join("    " + c for c in cursors)}
   </g>
-  <title>ILIV007 — knight emblem</title>
+  <title>{esc(user)} — knight emblem</title>
 </svg>'''
 
 
 def main():
-    src = sys.argv[1] if len(sys.argv) > 1 else "data/prepped.png"
-    out = sys.argv[2] if len(sys.argv) > 2 else "iliv-knight.svg"
-    print(f"Building ASCII grid from {src}...")
-    rows = build_grid(src)
-    print(f"Generating SVG ({COLS}×{ROWS})...")
-    svg = make_svg(rows)
+    out = sys.argv[1] if len(sys.argv) > 1 else "iliv-knight.svg"
+    username = sys.argv[2] if len(sys.argv) > 2 else "ILIV007"
+    svg = make_svg(username)
     Path(out).write_text(svg, encoding="utf-8")
     print(f"Written {out} ({len(svg)} bytes)")
 
