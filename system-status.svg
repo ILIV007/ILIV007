@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 200" width="860">
+  <defs>
+    <filter id="barGlow" x="-5%" y="-20%" width="110%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace; font-size: 12px; }
+    .title { fill: #00f0ff; font-weight: bold; font-size: 14px; filter: url(#barGlow); }
+    .label { fill: #c9d1d9; font-weight: bold; }
+    .value { fill: #c9d1d9; }
+    .bar-bg { fill: #1c2128; rx: 3; }
+    .bar-fill { rx: 3; filter: url(#barGlow); }
+    @keyframes barGrow {
+      from { width: 0; }
+      to   { width: var(--target-width); }
+    }
+    .anim-bar { animation: barGrow 0.8s ease-out forwards; }
+  </style>
+  <rect width="100%" height="100%" fill="#0a0e14" rx="8" stroke="#21262d" stroke-width="1"/>
+  <text x="28" y="24" class="title">SYSTEM STATUS</text>
+  <line x1="28" y1="32" x2="832" y2="32" stroke="#21262d" stroke-width="1"/>
+  <text x="28" y="36" class="label">CPU</text>
+  <rect class="bar-bg" x="28" y="42" width="302" height="10"/>
+  <rect class="bar-fill anim-bar" x="28" y="42" height="10" fill="#00f0ff"
+        style="--target-width: 217px; width: 0;"/>
+  <text x="338" y="51" class="value">72%</text>
+  <text x="450" y="36" class="label">RAM</text>
+  <rect class="bar-bg" x="450" y="42" width="302" height="10"/>
+  <rect class="bar-fill anim-bar" x="450" y="42" height="10" fill="#39d353"
+        style="--target-width: 175px; width: 0;"/>
+  <text x="760" y="51" class="value">58%</text>
+  <text x="28" y="66" class="label">Workers</text>
+  <rect class="bar-bg" x="28" y="72" width="302" height="10"/>
+  <rect class="bar-fill anim-bar" x="28" y="72" height="10" fill="#ff00a0"
+        style="--target-width: 211px; width: 0;"/>
+  <text x="338" y="81" class="value">6</text>
+  <text x="450" y="66" class="label">Requests</text>
+  <rect class="bar-bg" x="450" y="72" width="302" height="10"/>
+  <rect class="bar-fill anim-bar" x="450" y="72" height="10" fill="#e3b341"
+        style="--target-width: 302px; width: 0;"/>
+  <text x="760" y="81" class="value">2.8M</text>
+  <text x="28" y="96" class="label">Latency</text>
+  <rect class="bar-bg" x="28" y="102" width="302" height="10"/>
+  <rect class="bar-fill anim-bar" x="28" y="102" height="10" fill="#f0883e"
+        style="--target-width: 302px; width: 0;"/>
+  <text x="338" y="111" class="value">18ms</text>
+</svg>

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 180" width="860">
+  <defs>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace; font-size: 12px; }
+    .title { fill: #00f0ff; font-weight: bold; font-size: 13px; filter: url(#glow); }
+    .cmd { fill: #e3b341; }
+    .ok { fill: #39d353; }
+    .ready { fill: #00f0ff; font-weight: bold; filter: url(#glow); }
+    .cursor { fill: #00f0ff; }
+  </style>
+  <rect width="100%" height="100%" fill="#0a0e14" rx="8" stroke="#21262d" stroke-width="1"/>
+  <text x="28" y="22" class="title">SYSTEM LOG</text>
+  <line x1="28" y1="30" x2="832" y2="30" stroke="#21262d" stroke-width="1"/>
+  <clipPath id="log-clip-21">
+    <rect x="28" y="20" width="0" height="20">
+      <animate attributeName="width" from="0" to="338.4"
+               begin="0.20s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="36" class="cmd" clip-path="url(#log-clip-21)">> Deploying Fredy v8.2 to Cloudflare Workers...</text>
+  <clipPath id="log-clip-28">
+    <rect x="28" y="38" width="0" height="20">
+      <animate attributeName="width" from="0" to="194.4"
+               begin="0.80s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="54" class="ok" clip-path="url(#log-clip-28)">  ✔ Build completed in 4.2s</text>
+  <clipPath id="log-clip-35">
+    <rect x="28" y="56" width="0" height="20">
+      <animate attributeName="width" from="0" to="136.8"
+               begin="1.10s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="72" class="ok" clip-path="url(#log-clip-35)">  ✔ KV store synced</text>
+  <clipPath id="log-clip-42">
+    <rect x="28" y="74" width="0" height="20">
+      <animate attributeName="width" from="0" to="266.4"
+               begin="1.40s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="90" class="ok" clip-path="url(#log-clip-42)">  ✔ Worker deployed to 275 edge nodes</text>
+  <clipPath id="log-clip-49">
+    <rect x="28" y="108" width="0" height="20">
+      <animate attributeName="width" from="0" to="172.8"
+               begin="1.80s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="124" class="cmd" clip-path="url(#log-clip-49)">> Syncing Hermes v3.1...</text>
+  <clipPath id="log-clip-56">
+    <rect x="28" y="126" width="0" height="20">
+      <animate attributeName="width" from="0" to="230.4"
+               begin="2.30s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="142" class="ok" clip-path="url(#log-clip-56)">  ✔ OpenRouter endpoints updated</text>
+  <clipPath id="log-clip-63">
+    <rect x="28" y="144" width="0" height="20">
+      <animate attributeName="width" from="0" to="187.2"
+               begin="2.60s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="160" class="ok" clip-path="url(#log-clip-63)">  ✔ Rate limits configured</text>
+  <clipPath id="log-clip-70">
+    <rect x="28" y="178" width="0" height="20">
+      <animate attributeName="width" from="0" to="216.0"
+               begin="3.00s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="194" class="cmd" clip-path="url(#log-clip-70)">> Updating AI Router models...</text>
+  <clipPath id="log-clip-77">
+    <rect x="28" y="196" width="0" height="20">
+      <animate attributeName="width" from="0" to="201.6"
+               begin="3.50s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="212" class="ok" clip-path="url(#log-clip-77)">  ✔ Claude 4 Sonnet — online</text>
+  <clipPath id="log-clip-84">
+    <rect x="28" y="214" width="0" height="20">
+      <animate attributeName="width" from="0" to="194.4"
+               begin="3.80s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="230" class="ok" clip-path="url(#log-clip-84)">  ✔ Gemini 2.5 Pro — online</text>
+  <clipPath id="log-clip-91">
+    <rect x="28" y="232" width="0" height="20">
+      <animate attributeName="width" from="0" to="144.0"
+               begin="4.10s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="248" class="ok" clip-path="url(#log-clip-91)">  ✔ GPT-4.1 — online</text>
+  <clipPath id="log-clip-98">
+    <rect x="28" y="266" width="0" height="20">
+      <animate attributeName="width" from="0" to="345.6"
+               begin="4.60s" dur="0.4s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="282" class="ready" clip-path="url(#log-clip-98)">[SYSTEM] All services operational. Latency: 18ms</text>
+  <rect class="cursor" x="28" y="288" width="8" height="14" rx="1">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"
+             begin="5.5s"/>
+  </rect>
+</svg>

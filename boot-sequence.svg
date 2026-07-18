@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 280" width="860">
+  <defs>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace; font-size: 12px; }
+    .title { fill: #00f0ff; font-weight: bold; font-size: 14px; filter: url(#glow); }
+    .divider { fill: #21262d; }
+    .ok { fill: #39d353; }
+    .init { fill: #e3b341; }
+    .ready { fill: #00f0ff; font-weight: bold; filter: url(#glow); }
+    .prompt { fill: #ff00a0; font-weight: bold; }
+    .cursor { fill: #00f0ff; }
+  </style>
+  <rect width="100%" height="100%" fill="#0a0e14" rx="8" stroke="#21262d" stroke-width="1"/>
+  <text x="430" y="38" text-anchor="middle" class="title">ILLYA AI COMMAND CENTER v2.0</text>
+  <text x="28" y="54" class="divider">═══════════════════════════════════════════════════════════════</text>
+  <clipPath id="boot-clip-23">
+    <rect x="28" y="70" width="0" height="18">
+      <animate attributeName="width" from="0" to="266.4"
+               begin="0.50s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="84" class="ok" clip-path="url(#boot-clip-23)">[ OK ]  Kernel: Linux 6.8-cloud-amd64</text>
+  <clipPath id="boot-clip-30">
+    <rect x="28" y="86" width="0" height="18">
+      <animate attributeName="width" from="0" to="208.8"
+               begin="0.65s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="100" class="ok" clip-path="url(#boot-clip-30)">[ OK ]  Memory: 64GB DDR5 ECC</text>
+  <clipPath id="boot-clip-37">
+    <rect x="28" y="102" width="0" height="18">
+      <animate attributeName="width" from="0" to="266.4"
+               begin="0.80s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="116" class="ok" clip-path="url(#boot-clip-37)">[ OK ]  CPU: AMD EPYC 9654 (96 cores)</text>
+  <clipPath id="boot-clip-44">
+    <rect x="28" y="118" width="0" height="18">
+      <animate attributeName="width" from="0" to="237.6"
+               begin="0.95s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="132" class="ok" clip-path="url(#boot-clip-44)">[ OK ]  Storage: NVMe RAID-10 4TB</text>
+  <clipPath id="boot-clip-51">
+    <rect x="28" y="134" width="0" height="18">
+      <animate attributeName="width" from="0" to="259.2"
+               begin="1.10s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="148" class="ok" clip-path="url(#boot-clip-51)">[ OK ]  Network: 10Gbps fiber uplink</text>
+  <clipPath id="boot-clip-58">
+    <rect x="28" y="164" width="0" height="18">
+      <animate attributeName="width" from="0" to="244.8"
+               begin="1.30s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="178" class="init" clip-path="url(#boot-clip-58)">[INIT]  Loading AI Core modules...</text>
+  <clipPath id="boot-clip-65">
+    <rect x="28" y="180" width="0" height="18">
+      <animate attributeName="width" from="0" to="273.6"
+               begin="1.50s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="194" class="init" clip-path="url(#boot-clip-65)">[INIT]  Mounting Cloudflare Workers...</text>
+  <clipPath id="boot-clip-72">
+    <rect x="28" y="196" width="0" height="18">
+      <animate attributeName="width" from="0" to="237.6"
+               begin="1.70s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="210" class="init" clip-path="url(#boot-clip-72)">[INIT]  Initializing AI Router...</text>
+  <clipPath id="boot-clip-79">
+    <rect x="28" y="212" width="0" height="18">
+      <animate attributeName="width" from="0" to="280.8"
+               begin="1.90s" dur="0.25s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="226" class="init" clip-path="url(#boot-clip-79)">[INIT]  Connecting to OpenRouter API...</text>
+  <clipPath id="boot-clip-86">
+    <rect x="28" y="242" width="0" height="18">
+      <animate attributeName="width" from="0" to="273.6"
+               begin="2.20s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="256" class="ok" clip-path="url(#boot-clip-86)">[ OK ]  Fredy Agent     v8.2  — ONLINE</text>
+  <clipPath id="boot-clip-93">
+    <rect x="28" y="258" width="0" height="18">
+      <animate attributeName="width" from="0" to="273.6"
+               begin="2.40s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="272" class="ok" clip-path="url(#boot-clip-93)">[ OK ]  Hermes Agent    v3.1  — ONLINE</text>
+  <clipPath id="boot-clip-100">
+    <rect x="28" y="274" width="0" height="18">
+      <animate attributeName="width" from="0" to="273.6"
+               begin="2.60s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="288" class="ok" clip-path="url(#boot-clip-100)">[ OK ]  Pixoris Engine  v2.2  — ONLINE</text>
+  <clipPath id="boot-clip-107">
+    <rect x="28" y="290" width="0" height="18">
+      <animate attributeName="width" from="0" to="273.6"
+               begin="2.80s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="304" class="ok" clip-path="url(#boot-clip-107)">[ OK ]  Hades Army      v0.9  — ONLINE</text>
+  <clipPath id="boot-clip-114">
+    <rect x="28" y="306" width="0" height="18">
+      <animate attributeName="width" from="0" to="273.6"
+               begin="3.00s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="320" class="ok" clip-path="url(#boot-clip-114)">[ OK ]  IVAI Bot        v4.0  — ONLINE</text>
+  <clipPath id="boot-clip-121">
+    <rect x="28" y="336" width="0" height="18">
+      <animate attributeName="width" from="0" to="259.2"
+               begin="3.30s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="350" class="ok" clip-path="url(#boot-clip-121)">[ OK ]  Claude 4 Sonnet  — CONNECTED</text>
+  <clipPath id="boot-clip-128">
+    <rect x="28" y="352" width="0" height="18">
+      <animate attributeName="width" from="0" to="259.2"
+               begin="3.50s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="366" class="ok" clip-path="url(#boot-clip-128)">[ OK ]  Gemini 2.5 Pro   — CONNECTED</text>
+  <clipPath id="boot-clip-135">
+    <rect x="28" y="368" width="0" height="18">
+      <animate attributeName="width" from="0" to="259.2"
+               begin="3.70s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="382" class="ok" clip-path="url(#boot-clip-135)">[ OK ]  GPT-4.1          — CONNECTED</text>
+  <clipPath id="boot-clip-142">
+    <rect x="28" y="384" width="0" height="18">
+      <animate attributeName="width" from="0" to="259.2"
+               begin="3.90s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="398" class="ok" clip-path="url(#boot-clip-142)">[ OK ]  DeepSeek V3      — CONNECTED</text>
+  <clipPath id="boot-clip-149">
+    <rect x="28" y="400" width="0" height="18">
+      <animate attributeName="width" from="0" to="259.2"
+               begin="4.10s" dur="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="414" class="ok" clip-path="url(#boot-clip-149)">[ OK ]  Qwen 3           — CONNECTED</text>
+  <text x="28" y="444" class="divider">═══════════════════════════════════════════════════════════════</text>
+  <clipPath id="boot-clip-157">
+    <rect x="28" y="460" width="0" height="18">
+      <animate attributeName="width" from="0" to="266.4"
+               begin="4.70s" dur="0.4s" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <text x="28" y="474" class="ready" clip-path="url(#boot-clip-157)">SYSTEM READY. Type 'whoami' to begin.</text>
+  <text x="28" y="490" class="prompt">iliya@cloud:~$ _</text>
+  <rect class="cursor" x="143.2" y="478" width="8" height="14" rx="1">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"
+             begin="5.00s"/>
+  </rect>
+</svg>
