@@ -6,11 +6,13 @@ Next.js 16 (App Router) source for the live /ILIV007 preview route.
 - `page.tsx` → `src/app/ILIV007/page.tsx`
 - `profile-page.tsx`, `profile-preview.tsx`, `readme-source-panel.tsx`,
   `terminal-window.tsx` → `src/components/`
-- `knight-emblem.ts`, `neofetch-card.ts`, `activity-feed.ts` → `src/lib/`
+- `profile-svg.ts` → `src/lib/`
 
-## Features
-- **iliv-knight.svg** — hand-drawn crusader great helm, self-typing SMIL
-- **info-card.svg** — minimal neofetch card (purple+gold, level ??, channel ILIVIR3)
-- **activity-feed.svg** — LIVE GitHub events feed (scrapes public API, no token)
+## What it does
+ONE single SVG (`profile.svg`) contains the entire profile:
+- Terminal frame with title bar
+- Live activity feed (scrapes GitHub public events API, no token)
+- Knight emblem (rect-based, hand-drawn crusader great helm)
+- Neofetch info card (ILIYA, level ??, channel ILIVIR3)
 
-No image libraries needed — the knight is hand-authored ASCII, not converted.
+All prompts live inside the SVG. No separate images, no floating HTML text.

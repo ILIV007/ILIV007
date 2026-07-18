@@ -8,7 +8,7 @@ import { ReadmeSourcePanel } from "@/components/readme-source-panel";
 
 const USERNAME = "ILIV007";
 const NAME = "ILIYA";
-const ZIP = "/ILIV007-profile-v0.4.zip";
+const ZIP = "/ILIV007-profile-v0.6.zip";
 
 export function ProfilePage() {
   const [replayKey, setReplayKey] = useState(0);
@@ -39,7 +39,7 @@ export function ProfilePage() {
               size="sm"
               className="gap-1.5 border-[#30363d] bg-[#0d1117] text-[#c9d1d9] hover:bg-[#161b22] hover:text-white"
             >
-              <Download className="h-3.5 w-3.5" /> profile v0.4
+              <Download className="h-3.5 w-3.5" /> profile v0.6
             </Button>
           </a>
         </div>

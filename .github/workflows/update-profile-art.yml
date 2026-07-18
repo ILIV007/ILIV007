@@ -2,7 +2,7 @@ name: Update profile art
 
 "on":
   schedule:
-    - cron: "17 6 * * *"   # ~06:17 UTC daily
+    - cron: "17 6 * * *"
   workflow_dispatch: {}
   push:
     branches: [main]
@@ -15,26 +15,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
-      - name: Install dependencies
-        run: pip install -r scripts/requirements.txt
-
-      - name: Render knight emblem
-        run: python scripts/make_knight_svg.py iliv-knight.svg ${{ github.repository_owner }}
-
-      - name: Render info card
-        run: python scripts/make_info_card.py info-card.svg
-
-      - name: Fetch & render live activity feed
-        run: python scripts/make_activity_feed.py activity-feed.svg
+      - run: pip install -r scripts/requirements.txt
+      - name: Render combined profile SVG
+        run: python scripts/make_profile_svg.py profile.svg
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
-
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh profile art [skip ci]"
-          file_pattern: "iliv-knight.svg info-card.svg activity-feed.svg"
+          file_pattern: "profile.svg"
