@@ -19,11 +19,15 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r scripts/requirements.txt
-      - name: Render combined profile SVG
-        run: python scripts/make_profile_svg.py profile.svg
+      - name: Render knight portrait
+        run: python scripts/make_knight_svg.py knight-portrait.png knight.svg ${{ github.repository_owner }}
+      - name: Render info card
+        run: python scripts/make_info_card.py info-card.svg ${{ github.repository_owner }}
+      - name: Fetch & render activity feed
+        run: python scripts/make_activity_feed.py activity-feed.svg
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh profile art [skip ci]"
-          file_pattern: "profile.svg"
+          file_pattern: "knight.svg info-card.svg activity-feed.svg"
