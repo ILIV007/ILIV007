@@ -7,7 +7,7 @@
   </style>
   <rect x="0.5" y="0.5" width="859" height="195" rx="8" ry="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
   <text x="830" y="22.0" text-anchor="end" font-size="11" fill="#8b949e">iliv007 · live</text>
-  <text x="40.0" y="22.0" font-size="11" fill="#8b949e">Jul</text>
+    <text x="40.0" y="22.0" font-size="11" fill="#8b949e">Jul</text>
   <text x="85.0" y="22.0" font-size="11" fill="#8b949e">Aug</text>
   <text x="145.0" y="22.0" font-size="11" fill="#8b949e">Sep</text>
   <text x="220.0" y="22.0" font-size="11" fill="#8b949e">Oct</text>
@@ -20,10 +20,10 @@
   <text x="670.0" y="22.0" font-size="11" fill="#8b949e">May</text>
   <text x="730.0" y="22.0" font-size="11" fill="#8b949e">Jun</text>
   <text x="805.0" y="22.0" font-size="11" fill="#8b949e">Jul</text>
-  <text x="32.0" y="55.0" text-anchor="end" font-size="10" fill="#8b949e">Mon</text>
+    <text x="32.0" y="55.0" text-anchor="end" font-size="10" fill="#8b949e">Mon</text>
   <text x="32.0" y="85.0" text-anchor="end" font-size="10" fill="#8b949e">Wed</text>
   <text x="32.0" y="115.0" text-anchor="end" font-size="10" fill="#8b949e">Fri</text>
-  <g class="cell" style="animation-delay:0.100s"><rect x="40.0" y="30.0" width="12" height="12" rx="2.5" ry="2.5" fill="#161b22"><title>2025-07-13: 0</title></rect></g>
+    <g class="cell" style="animation-delay:0.100s"><rect x="40.0" y="30.0" width="12" height="12" rx="2.5" ry="2.5" fill="#161b22"><title>2025-07-13: 0</title></rect></g>
   <g class="cell" style="animation-delay:0.110s"><rect x="40.0" y="45.0" width="12" height="12" rx="2.5" ry="2.5" fill="#161b22"><title>2025-07-14: 0</title></rect></g>
   <g class="cell" style="animation-delay:0.120s"><rect x="40.0" y="60.0" width="12" height="12" rx="2.5" ry="2.5" fill="#161b22"><title>2025-07-15: 0</title></rect></g>
   <g class="cell" style="animation-delay:0.130s"><rect x="40.0" y="75.0" width="12" height="12" rx="2.5" ry="2.5" fill="#161b22"><title>2025-07-16: 0</title></rect></g>
@@ -395,7 +395,7 @@
   <g class="cell" style="animation-delay:0.670s"><rect x="820.0" y="105.0" width="12" height="12" rx="2.5" ry="2.5" fill="#7c3aed"><title>2026-07-17: 12</title></rect></g>
   <g class="cell" style="animation-delay:0.680s"><rect x="820.0" y="120.0" width="12" height="12" rx="2.5" ry="2.5" fill="#c4b5fd"><title>2026-07-18: 26</title></rect></g>
   <text x="726.0" y="164.0" text-anchor="end" font-size="11" fill="#8b949e">Less</text><text x="834.0" y="164.0" font-size="11" fill="#8b949e">More</text>
-  <rect x="734.0" y="153.0" width="12" height="12" rx="2.5" ry="2.5" fill="#161b22"/>
+    <rect x="734.0" y="153.0" width="12" height="12" rx="2.5" ry="2.5" fill="#161b22"/>
   <rect x="750.0" y="153.0" width="12" height="12" rx="2.5" ry="2.5" fill="#2d1b4e"/>
   <rect x="766.0" y="153.0" width="12" height="12" rx="2.5" ry="2.5" fill="#4c1d95"/>
   <rect x="782.0" y="153.0" width="12" height="12" rx="2.5" ry="2.5" fill="#7c3aed"/>
