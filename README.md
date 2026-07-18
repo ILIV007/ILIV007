@@ -2,8 +2,6 @@
 <img src="./activity-feed.svg" width="860" />
 
 <br><br>
-
-
 <table>
   <tr>
     <td valign="top"><img src="./knight.svg" width="400" /></td>
