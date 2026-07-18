@@ -1,0 +1,53 @@
+name: Update GPOS
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch contributions
+        run: python scripts/fetch_contributions.py
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+
+      - name: Render PCB heatmap
+        run: python scripts/render_heatmap_svg.py
+
+      - name: Build boot sequence
+        run: python scripts/make_boot_sequence.py
+
+      - name: Build system status
+        run: python scripts/make_system_status.py
+
+      - name: Build network flow
+        run: python scripts/make_network_flow.py
+
+      - name: Build system log
+        run: python scripts/make_system_log.py
+
+      - name: Build mission card
+        run: python scripts/make_mission_card.py
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh GPOS [skip ci]"
+          file_pattern: "data/*.json *.svg"

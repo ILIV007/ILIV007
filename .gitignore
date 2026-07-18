@@ -1,0 +1,19 @@
+# Virtual env
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local prepped image
+source-prepped.png
+
+# IDE
+.vscode/
+.idea/
