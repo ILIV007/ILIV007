@@ -3,7 +3,7 @@
 
 <br><br>
 
-<h3><code>ILIV007@github ~ $ whoami</code></h3>
+
 <table>
   <tr>
     <td valign="top"><img src="./knight.svg" width="400" /></td>
