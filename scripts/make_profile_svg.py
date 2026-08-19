@@ -95,13 +95,13 @@ def make_svg():
     badge=OK if st else WARN;bs_=f"{'live'if st else'cached'}"
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
-<defs><filter id="glow"x="-20%"y="-20%"width="140%"height="140%"><feGaussianBlur stdDeviation="2.5"result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-<rect x="0.5"y="0.5"width="{W-1}"height="{H-1}"rx="10"ry="10"fill="{BG}"stroke="{P1}"stroke-width="1"opacity="0.6"/>
-<path d="M0.5 10 a10 10 0 0 1 10 -9.5 H{W-10.5} a10 10 0 0 1 10 9.5 V{tb} H0.5 Z"fill="#0d0d18"/>
-<line x1="0.5"y1="{tb}"x2="{W-0.5}"y2="{tb}"stroke="{P1}"stroke-width="1"opacity="0.4"/>
-<circle cx="16"cy="16"r="5"fill="#ff5f56"/><circle cx="33"cy="16"r="5"fill="#ffbd2e"/><circle cx="50"cy="16"r="5"fill="#27c93f"/>
-<text x="{W/2}"y="20.5"text-anchor="middle"font-family="'Courier New',monospace"font-size="11"fill="{DIM}">guest@{esc(USERNAME.lower())}: ~ — tty0</text>
-<text x="{W-18}"y="20.5"text-anchor="end"font-family="'Courier New',monospace"font-size="11"fill="{badge}">● {bs_}</text>
+<defs><filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="10" ry="10" fill="{BG}" stroke="{P1}" stroke-width="1" opacity="0.6"/>
+<path d="M0.5 10 a10 10 0 0 1 10 -9.5 H{W-10.5} a10 10 0 0 1 10 9.5 V{tb} H0.5 Z" fill="#0d0d18"/>
+<line x1="0.5" y1="{tb}" x2="{W-0.5}" y2="{tb}" stroke="{P1}" stroke-width="1" opacity="0.4"/>
+<circle cx="16" cy="16" r="5" fill="#ff5f56"/><circle cx="33" cy="16" r="5" fill="#ffbd2e"/><circle cx="50" cy="16" r="5" fill="#27c93f"/>
+<text x="{W/2}" y="20.5" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="{DIM}">guest@{esc(USERNAME.lower())}: ~ — tty0</text>
+<text x="{W-18}" y="20.5" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="{badge}">● {bs_}</text>
 {sparkles()}
 {chr(10).join("  "+t for t in bt)}
 {bg_}
