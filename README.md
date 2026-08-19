@@ -1,14 +1,34 @@
-<div align="center">
-<img src="./activity-feed.svg" width="860" />
+# ILIV007 — terminal
 
-<br><br>
-<table>
-  <tr>
-    <td valign="top"><img src="./knight.svg" width="400" /></td>
-    <td valign="top"><img src="./info-card.svg" width="460" /></td>
-  </tr>
-</table>
+A developer blog that behaves like a TTY: prompt, cursor, history,
+tab-completion with ghost text, CRT overlay, games, and an expansion pack.
 
-</div>
+One HTML file. No framework. No build step. No tracking.
 
-<!-- animated SVG · SMIL + CSS keyframes · no JavaScript -->
+## Commands
+
+`ls` · `cat` · `cd` · `whoami` · `links` · `help` · `neofetch` · `mail` ·
+`snake` · `matrix` · `wpm` · `hack` · `sl` · `cowsay` · `fortune` ·
+`coffee` · `git log` · `ps` · `uptime` · `theme` · `crt` · `sound` · `party`
+
+## Contact
+
+- **github:** https://github.com/ILIV007
+- **email:** ILIV007@proton.me
+- **telegram:** @ILIVIR3
+- **website:** https://ilivir3.pages.dev/
+
+## Themes
+
+`neon` (purple) · `azure` (blue) · `void` (gray)
+
+## Keys
+
+- **Tab** — complete (ghost preview)
+- **Right** — accept ghost
+- **Up/Down** — history
+- **Ctrl+C / Ctrl+L** — cancel / clear
+
+## Easter eggs
+
+`rm -rf /` · `sudo` · `xyzzy` · Konami code (↑↑↓↓←→←→ba)
