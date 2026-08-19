@@ -403,7 +403,7 @@ const e=' '+'-'.repeat(t.length+2);
 const cow='        \\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n                ||----w |\n                ||     ||';
 print('<pre style="white-space:pre;overflow-x:auto;margin:4px 0">'+esc(b+'\n'+c+'\n'+e+'\n'+cow)+'</pre>');}
 
-const MAN=['HELP(1)              User Commands              HELP(1)','','NAME','       help - the manual for this terminal-blog','','NAVIGATION','       ls [-l] [path]     list posts and topics','       cat <file>         read a post','       cd <topic>         enter topic (tag filter)','       topics             list tags','','PAGES','       whoami             about the author','       links              contact info (github/email/tg/web)','       mail [address]     compose message','       gh                 open github','       neofetch           system info','','GAMES','       snake              arrows to play, q quits','       matrix             purple rain, any key exits','       hack               fake hollywood hacking','       wpm                typing speed test','       sl                 train (you meant ls)','       cowsay [text]      the cow','       fortune            wisdom','','SETTINGS','       theme [name]       neon | azure | void','       crt [on|off]       CRT effects','       sound [on|off]     keypress audio','       clear              wipe screen','','KEYS','       Tab                complete (ghost preview)','       Right              accept ghost','       Up/Down            history','       Ctrl+C / Ctrl+L    cancel / clear','','tty-blog                     2025-11-12           HELP(1)'];
+const MAN=['HELP(1)              User Commands              HELP(1)','','NAME','       help - the manual for this terminal-blog','','NAVIGATION','       ls [-l] [path]     list posts and topics','       cat <file>         read a post','       cd <topic>         enter topic (tag filter)','       topics             list tags','','PAGES','       links              contact — github, email, telegram, web','       whoami             about the author','       mail [address]     compose message','       gh                 open github','       neofetch           system info','','GAMES','       matrix             purple rain, any key exits','       hack               fake hollywood hacking','       wpm                typing speed test','       snake              arrows to play, q quits','       sl                 train (you meant ls)','       cowsay [text]      the cow','       fortune            wisdom','','SETTINGS','       theme [name]       neon | azure | void','       crt [on|off]       CRT effects','       sound [on|off]     keypress audio','       clear              wipe screen','','KEYS','       Tab                complete (ghost preview)','       Right              accept ghost','       Up/Down            history','       Ctrl+C / Ctrl+L    cancel / clear','','tty-blog                     2025-11-12           HELP(1)'];
 
 function openMail(to){state.busy=true;pl.classList.add('off');
 const d=document.createElement('div');d.className='mail';
@@ -575,7 +575,7 @@ const d=document.createElement('div');d.className='banner';let h='';
 for(let r=0;r<6;r++){h+='<div>';'ILIV007'.split('').forEach((ch,i)=>{h+='<span class="'+(i<4?'b1':'b2')+'">'+(F[ch]?F[ch][r]:' ')+'</span> '});h+='</div>';}
 d.innerHTML=h;out.appendChild(d);
 print('<span class="p-d">~/dev - a developer blog that behaves like a TTY</span>');
-print('<span class="p-d">type</span> <span class="cl" data-cmd="help">help</span> <span class="p-d">-</span> <span class="cl" data-cmd="ls">ls</span> <span class="p-d">-</span> <span class="cl" data-cmd="snake">snake</span> <span class="p-d">-</span> <span class="cl" data-cmd="whoami">whoami</span>');
+print('<span class="p-d">type</span> <span class="cl" data-cmd="help">help</span> <span class="p-d">-</span> <span class="cl" data-cmd="links">links</span> <span class="p-d">-</span> <span class="cl" data-cmd="whoami">whoami</span> <span class="p-d">-</span> <span class="cl" data-cmd="ls">ls</span>');
 print('<span class="p-d">nothing tracks you here. the cursor just blinks.</span>');
 scroll(true);}
 
@@ -608,24 +608,9 @@ body.party-on #app{animation:party 4s linear infinite}
 </style>
 <script>
 'use strict';
-if(typeof REG==='undefined')throw new Error('EXPANSION PACK: base script not found');
+if(typeof REG==='undefined')throw new Error('base script not found');
 ['snake','matrix','hack','wpm','sl','cowsay','fortune','coffee','party','git','ps','xyzzy','uptime']
   .forEach(c=>{if(!CMDS.includes(c))CMDS.push(c);});
-MAN.splice(MAN.length-1,0,
-'','GAMES & TOYS',
-'       snake              arrows to move · eat the ◆ · q quits',
-'       matrix             purple rain — any key to wake up',
-'       hack               hollywood-grade hacking (100% fake)',
-'       wpm                typing speed test, terminal-style',
-'       sl                 you meant ls. everyone means ls.',
-'       cowsay [text]      the classic cow — no text = a fortune',
-'       fortune            terminal wisdom, freshly baked',
-'       coffee             brew one · +40% productivity',
-'       party [off]        cycle the neon, lose the dignity','',
-'EXTRAS',
-"       git log | git push the blog's own commit history",
-'       ps, uptime         what is really running on this machine',
-'       xyzzy              …try it. and there is a 10-key cheat code.');
 const FORTUNES_EP=[
 "there are two hard problems in cs: cache invalidation, naming things, and off-by-one errors.",
 "it works on my machine — a deployment strategy, if you are brave.",
@@ -890,10 +875,6 @@ window.addEventListener('keydown',e=>{
       print('cheat accepted: +30 lives. spend them on the deadline.','dim');},4000);
   }
 });
-setTimeout(()=>{
-  if(!state.busy&&!SG_EP&&!WPM_EP&&!MX_EP)
-    print('<span class="p-d">[expansion pack loaded] new toys:</span> <span class="cl" data-cmd="snake">snake</span> <span class="cl" data-cmd="matrix">matrix</span> <span class="cl" data-cmd="hack">hack</span> <span class="cl" data-cmd="wpm">wpm</span> <span class="cl" data-cmd="sl">sl</span> <span class="cl" data-cmd="cowsay">cowsay</span> <span class="cl" data-cmd="fortune">fortune</span> <span class="cl" data-cmd="links">links</span> <span class="p-d">— plus a 10-key cheat code.</span>');
-},1500);
 </script>
 </body>
 </html>

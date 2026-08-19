@@ -1,14 +1,19 @@
 # ILIV007 — terminal
 
 A developer blog that behaves like a TTY: prompt, cursor, history,
-tab-completion with ghost text, CRT overlay, games, and an expansion pack.
+tab-completion with ghost text, CRT overlay, and games.
 
 One HTML file. No framework. No build step. No tracking.
 
+## Quick start
+
+Open `index.html` in any browser. Or host it on GitHub Pages, Netlify,
+or any static host.
+
 ## Commands
 
-`ls` · `cat` · `cd` · `whoami` · `links` · `help` · `neofetch` · `mail` ·
-`snake` · `matrix` · `wpm` · `hack` · `sl` · `cowsay` · `fortune` ·
+`ls` · `cat` · `cd` · `links` · `whoami` · `help` · `neofetch` · `mail` ·
+`matrix` · `hack` · `wpm` · `snake` · `sl` · `cowsay` · `fortune` ·
 `coffee` · `git log` · `ps` · `uptime` · `theme` · `crt` · `sound` · `party`
 
 ## Contact
