@@ -4,4 +4,4 @@
 
 </div>
 
-<!-- animated SVG · SMIL + CSS keyframes · no JavaScript -->
+<!-- animated SVG · SMIL + neon glow · no JavaScript -->

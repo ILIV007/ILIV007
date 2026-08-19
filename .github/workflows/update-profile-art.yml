@@ -18,8 +18,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - run: pip install -r scripts/requirements.txt
       - name: Render profile SVG
         run: python scripts/make_profile_svg.py profile.svg
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh profile art [skip ci]"
