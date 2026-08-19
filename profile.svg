@@ -1,105 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="860" height="520" viewBox="0 0 860 520">
-  <!-- frame -->
   <rect x="0.5" y="0.5" width="859" height="519" rx="10" ry="10" fill="#07070e" stroke="#544e78" stroke-width="1" opacity="0.5"/>
-  <!-- title bar -->
   <path d="M0.5 10 a10 10 0 0 1 10 -9.5 H849.5 a10 10 0 0 1 10 9.5 V32 H0.5 Z" fill="#0d0d18"/>
   <line x1="0.5" y1="32" x2="859.5" y2="32" stroke="#544e78" stroke-width="1" opacity="0.5"/>
   <circle cx="16" cy="16" r="5" fill="#ff5f56"/>
   <circle cx="33" cy="16" r="5" fill="#ffbd2e"/>
   <circle cx="50" cy="16" r="5" fill="#27c93f"/>
-  <text x="430" y="20.5" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#544e78">guest@iliv007: ~ — tty0</text>
+  <text x="430.0" y="20.5" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#544e78">guest@iliv007: ~ — tty0</text>
   <text x="842" y="20.5" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="#3fe0a0">● live</text>
-  <!-- boot lines -->
-  <text x="22" y="52" font-family="'Courier New', monospace" font-size="13" fill="#544e78" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.4s" fill="freeze"/>tty-blog bios — neon cold start</text>
+    <text x="22" y="52" font-family="'Courier New', monospace" font-size="13" fill="#544e78" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.4s" fill="freeze"/>tty-blog bios — neon cold start</text>
   <text x="22" y="72" font-family="'Courier New', monospace" font-size="13" fill="#544e78" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.40s" dur="0.4s" fill="freeze"/><tspan fill="#3fe0a0" font-weight="700">[ ok ]</tspan> mounting /dev/blog ... 5 posts, 3 projects</text>
   <text x="22" y="92" font-family="'Courier New', monospace" font-size="13" fill="#544e78" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.65s" dur="0.4s" fill="freeze"/><tspan fill="#3fe0a0" font-weight="700">[ ok ]</tspan> loading commands ... ls, cat, links, whoami, neofetch</text>
   <text x="22" y="112" font-family="'Courier New', monospace" font-size="13" fill="#544e78" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.90s" dur="0.4s" fill="freeze"/><tspan fill="#3fe0a0" font-weight="700">[ ok ]</tspan> cursor blink rate ... 1.06s (CRT-accurate)</text>
   <text x="22" y="132" font-family="'Courier New', monospace" font-size="13" fill="#544e78" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.15s" dur="0.4s" fill="freeze"/><tspan fill="#ffc861" font-weight="700">[ warn ]</tspan> nostalgia levels ... within legal limits</text>
   <text x="22" y="152" font-family="'Courier New', monospace" font-size="13" fill="#544e78" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.40s" dur="0.4s" fill="freeze"/><tspan fill="#3fe0a0" font-weight="700">[ ok ]</tspan> starting fakesh 1.06 ... done</text>
-  <!-- banner -->
-  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.65s" dur="0.6s" fill="freeze"/><rect x="301" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="301" y="190" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="301" y="196" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="301" y="202" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="301" y="208" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="301" y="214" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="339" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="345" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="339" y="190" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="339" y="196" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="339" y="202" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="339" y="208" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="339" y="214" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="345" y="214" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="377" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="377" y="190" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="377" y="196" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="377" y="202" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="377" y="208" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="377" y="214" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="415" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="433" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="415" y="190" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="433" y="190" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="415" y="196" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="433" y="196" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="415" y="202" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="433" y="202" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="421" y="208" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="427" y="208" width="5" height="5" rx="1" fill="#b388ff"/>
-  <rect x="459" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="465" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="471" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="453" y="190" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="477" y="190" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="453" y="196" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="477" y="196" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="453" y="202" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="477" y="202" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="453" y="208" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="477" y="208" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="459" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="465" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="471" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="497" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="503" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="509" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="491" y="190" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="515" y="190" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="491" y="196" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="515" y="196" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="491" y="202" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="515" y="202" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="491" y="208" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="515" y="208" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="497" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="503" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="509" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="529" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="535" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="541" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="547" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="553" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="547" y="190" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="541" y="196" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="535" y="202" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="535" y="208" width="5" height="5" rx="1" fill="#5fb0ff"/>
-  <rect x="535" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/></g>
-  <!-- tagline -->
-  <text x="430" y="236" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#544e78" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.05s" dur="0.4s" fill="freeze"/>~/dev — a developer blog that behaves like a TTY</text>
-  <!-- neofetch info -->
-  <text x="22" y="260" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.25s" dur="0.3s" fill="freeze"/><tspan fill="#b388ff" font-weight="700">OS        </tspan><tspan fill="#b388ff">tty-blog neon</tspan></text>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.65s" dur="0.6s" fill="freeze"/><rect x="301.0" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="301.0" y="190" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="301.0" y="196" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="301.0" y="202" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="301.0" y="208" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="301.0" y="214" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="339.0" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="345.0" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="339.0" y="190" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="339.0" y="196" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="339.0" y="202" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="339.0" y="208" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="339.0" y="214" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="345.0" y="214" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="377.0" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="377.0" y="190" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="377.0" y="196" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="377.0" y="202" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="377.0" y="208" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="377.0" y="214" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="415.0" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="433.0" y="184" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="415.0" y="190" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="433.0" y="190" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="415.0" y="196" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="433.0" y="196" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="415.0" y="202" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="433.0" y="202" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="421.0" y="208" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="427.0" y="208" width="5" height="5" rx="1" fill="#b388ff"/>
+  <rect x="459.0" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="465.0" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="471.0" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="453.0" y="190" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="477.0" y="190" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="453.0" y="196" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="477.0" y="196" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="453.0" y="202" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="477.0" y="202" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="453.0" y="208" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="477.0" y="208" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="459.0" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="465.0" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="471.0" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="497.0" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="503.0" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="509.0" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="491.0" y="190" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="515.0" y="190" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="491.0" y="196" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="515.0" y="196" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="491.0" y="202" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="515.0" y="202" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="491.0" y="208" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="515.0" y="208" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="497.0" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="503.0" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="509.0" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="529.0" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="535.0" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="541.0" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="547.0" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="553.0" y="184" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="547.0" y="190" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="541.0" y="196" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="535.0" y="202" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="535.0" y="208" width="5" height="5" rx="1" fill="#5fb0ff"/>
+  <rect x="535.0" y="214" width="5" height="5" rx="1" fill="#5fb0ff"/></g>
+  <text x="430.0" y="236" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#544e78" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.05s" dur="0.4s" fill="freeze"/>~/dev — a developer blog that behaves like a TTY</text>
+    <text x="22" y="260" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.25s" dur="0.3s" fill="freeze"/><tspan fill="#b388ff" font-weight="700">OS        </tspan><tspan fill="#b388ff">tty-blog neon</tspan></text>
   <text x="22" y="278" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.35s" dur="0.3s" fill="freeze"/><tspan fill="#b388ff" font-weight="700">Kernel    </tspan><tspan fill="#b388ff">single-file.html</tspan></text>
   <text x="22" y="296" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.45s" dur="0.3s" fill="freeze"/><tspan fill="#b388ff" font-weight="700">Shell     </tspan><tspan fill="#b388ff">fakesh 1.06</tspan></text>
   <text x="22" y="314" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.55s" dur="0.3s" fill="freeze"/><tspan fill="#b388ff" font-weight="700">Theme     </tspan><tspan fill="#b388ff">neon (purple)</tspan></text>
   <text x="22" y="332" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.65s" dur="0.3s" fill="freeze"/><tspan fill="#b388ff" font-weight="700">Deps      </tspan><tspan fill="#b388ff">0</tspan></text>
-  <!-- contact -->
-  <text x="22" y="364" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.75s" dur="0.3s" fill="freeze"/><tspan fill="#5fb0ff" font-weight="700">github    </tspan><tspan fill="#f0edff">github.com/ILIV007</tspan></text>
+    <text x="22" y="364" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.75s" dur="0.3s" fill="freeze"/><tspan fill="#5fb0ff" font-weight="700">github    </tspan><tspan fill="#f0edff">github.com/ILIV007</tspan></text>
   <text x="22" y="382" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.85s" dur="0.3s" fill="freeze"/><tspan fill="#5fb0ff" font-weight="700">email     </tspan><tspan fill="#f0edff">ILIV007@proton.me</tspan></text>
   <text x="22" y="400" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.95s" dur="0.3s" fill="freeze"/><tspan fill="#5fb0ff" font-weight="700">telegram  </tspan><tspan fill="#f0edff">@ILIVIR3</tspan></text>
   <text x="22" y="418" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3.05s" dur="0.3s" fill="freeze"/><tspan fill="#5fb0ff" font-weight="700">website   </tspan><tspan fill="#f0edff">ilivir3.pages.dev</tspan></text>
-  <!-- prompt + cursor -->
   <text x="22" y="452" font-family="'Courier New', monospace" font-size="13" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3.35s" dur="0.3s" fill="freeze"/><tspan fill="#5fb0ff" font-weight="700">guest@iliv007</tspan><tspan fill="#544e78">:</tspan><tspan fill="#b388ff" font-weight="700">~</tspan><tspan fill="#5fb0ff" font-weight="700">$ </tspan><tspan fill="#f0edff">help</tspan></text>
   <rect x="232" y="440" width="8" height="14" rx="1" fill="#b388ff" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3.35s" dur="0.2s" fill="freeze"/><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" begin="3.65s" dur="1.06s" repeatCount="indefinite"/></rect>
   <title>ILIV007 — terminal</title>
