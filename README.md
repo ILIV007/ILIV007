@@ -10,4 +10,12 @@
 
 ## Find me
 
-<p align="center"><a href="https://t.me/ILIVIR3"><img src="./findme/telegram-channel.svg" width="192" alt="Telegram Channel" /></a><a href="https://t.me/ILIV007"><img src="./findme/telegram.svg" width="192" alt="Telegram" /></a><a href="https://ilivir3.pages.dev"><img src="./findme/website.svg" width="174" alt="Website" /></a><a href="mailto:ILIV007@proton.me"><img src="./findme/email.svg" width="138" alt="Email" /></a><a href="https://donate-iv.pages.dev"><img src="./findme/donate.svg" width="164" alt="Donate" /></a></p>
+<p align="center">
+  <samp>
+    <a href="https://t.me/ILIVIR3">→ ＣＨＡＮＮＥＬ　　t.me/ILIVIR3</a><br />
+    <a href="https://t.me/ILIV007">→ ＴＥＬＥＧＲＡＭ　t.me/ILIV007</a><br />
+    <a href="https://ilivir3.pages.dev">→ ＷＥＢＳＩＴＥ　　ilivir3.pages.dev</a><br />
+    <a href="mailto:ILIV007@proton.me">→ ＥＭＡＩＬ　　　　ILIV007@proton.me</a><br />
+    <a href="https://donate-iv.pages.dev">→ ＤＯＮＡＴＥ　　　donate-iv.pages.dev</a>
+  </samp>
+</p>
