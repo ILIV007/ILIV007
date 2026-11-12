@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#glow)">
+    <animate attributeName="opacity" values="1;0.72;1" begin="1.6s" dur="2.8s" repeatCount="indefinite"/>
+    <g transform="translate(20,6)" fill="none" stroke="#ffc861" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></g>
+  </g>
+  <text x="32" y="52" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" letter-spacing="1" fill="#8b85b8">DONATE</text>
+  <title>DONATE</title>
+</svg>
