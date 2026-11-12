@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./profile.svg" width="860" />
+<a href="https://github.com/ILIV007"><img src="./profile.svg" width="860" /></a>
 
 </div>
 
@@ -8,17 +8,12 @@
 
 **Building useful software — bots, tools and web apps, from idea to live product.**
 
-## What I build
-
-- 🤖 **Telegram bots** — automation and AI assistants that run on their own
-- 🌐 **Web apps** — small, fast, static-first
-- 🛠️ **Tools** — CLIs and utilities that solve one job well
-- 📚 **Open source** — a curated library of agent skills
-
 ## Find me
 
-- 💬 Telegram channel: [@ILIVIR3](https://t.me/ILIVIR3)
-- ✈️ Telegram: [@ILIV007](https://t.me/ILIV007)
-- 🌐 Website: [ilivir3.pages.dev](https://ilivir3.pages.dev)
-- ✉️ Email: [ILIV007@proton.me](mailto:ILIV007@proton.me)
-- ☕ Support my work: [donate-iv.pages.dev](https://donate-iv.pages.dev)
+<p align="center">
+  <a href="https://t.me/ILIVIR3"><img src="./findme/telegram-channel.svg" width="200" alt="Telegram Channel" /></a>
+  <a href="https://t.me/ILIV007"><img src="./findme/telegram.svg" width="200" alt="Telegram" /></a>
+  <a href="https://ilivir3.pages.dev"><img src="./findme/website.svg" width="200" alt="Website" /></a>
+  <a href="mailto:ILIV007@proton.me"><img src="./findme/email.svg" width="200" alt="Email" /></a>
+  <a href="https://donate-iv.pages.dev"><img src="./findme/donate.svg" width="200" alt="Donate" /></a>
+</p>
