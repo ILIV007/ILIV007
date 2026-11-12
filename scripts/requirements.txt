@@ -1,1 +1,1 @@
-requests==2.32.3
+# No dependencies — the profile SVG is static since Stage B (2026-11-12).
