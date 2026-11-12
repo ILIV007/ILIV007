@@ -17,7 +17,7 @@ from pathlib import Path
 SVG = r"""<?xml version="1.0" encoding="UTF-8"?>
 <!-- ILIV007 profile terminal — neon, no JavaScript, SMIL only.
      No numbers, no stats, nothing that goes stale: fixed text only. -->
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="308" viewBox="0 0 860 308">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="476" viewBox="0 0 860 476">
   <defs>
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="2.5" result="blur"/>
@@ -26,7 +26,7 @@ SVG = r"""<?xml version="1.0" encoding="UTF-8"?>
   </defs>
 
   <!-- window -->
-  <rect x="0.5" y="0.5" width="859" height="307" rx="10" fill="#07070e" stroke="#b388ff" stroke-width="1" opacity="0.6"/>
+  <rect x="0.5" y="0.5" width="859" height="475" rx="10" fill="#07070e" stroke="#b388ff" stroke-width="1" opacity="0.6"/>
   <path d="M0.5 10 a10 10 0 0 1 10 -9.5 H849.5 a10 10 0 0 1 10 9.5 V32 H0.5 Z" fill="#0d0d18"/>
   <line x1="0.5" y1="32" x2="859.5" y2="32" stroke="#b388ff" stroke-width="1" opacity="0.4"/>
   <circle cx="16" cy="16" r="5" fill="#ff5f56"/>
@@ -64,7 +64,14 @@ SVG = r"""<?xml version="1.0" encoding="UTF-8"?>
     <text x="28" y="218"><tspan fill="#3fe0a0">guest@iliv007:~$</tspan><tspan fill="#e8e6f5"> whatis iliya</tspan></text>
     <text x="28" y="244" fill="#c9c6e8">bots, tools and web apps — from idea to live product.</text>
 
-    <text x="28" y="282"><tspan fill="#3fe0a0">guest@iliv007:~$</tspan></text><rect x="196" y="270" width="9" height="16" fill="#3fe0a0"><animate attributeName="opacity" values="1;0;1" dur="1.06s" repeatCount="indefinite"/></rect>
+    <text x="28" y="282"><tspan fill="#3fe0a0">guest@iliv007:~$</tspan><tspan fill="#e8e6f5"> links</tspan></text>
+    <text x="28" y="308"><tspan fill="#5fb0ff">channel </tspan><tspan fill="#8b85b8"> → </tspan><tspan fill="#c9c6e8">t.me/ILIVIR3</tspan></text>
+    <text x="28" y="334"><tspan fill="#67e8f9">telegram</tspan><tspan fill="#8b85b8"> → </tspan><tspan fill="#c9c6e8">t.me/ILIV007</tspan></text>
+    <text x="28" y="360"><tspan fill="#3fe0a0">website </tspan><tspan fill="#8b85b8"> → </tspan><tspan fill="#c9c6e8">ilivir3.pages.dev</tspan></text>
+    <text x="28" y="386"><tspan fill="#b388ff">email   </tspan><tspan fill="#8b85b8"> → </tspan><tspan fill="#c9c6e8">ILIV007@proton.me</tspan></text>
+    <text x="28" y="412"><tspan fill="#ffc861">donate  </tspan><tspan fill="#8b85b8"> → </tspan><tspan fill="#c9c6e8">donate-iv.pages.dev</tspan></text>
+
+    <text x="28" y="450"><tspan fill="#3fe0a0">guest@iliv007:~$</tspan></text><rect x="196" y="438" width="9" height="16" fill="#3fe0a0"><animate attributeName="opacity" values="1;0;1" dur="1.06s" repeatCount="indefinite"/></rect>
   </g>
 
   <title>ILIV007 — terminal</title>
