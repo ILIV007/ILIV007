@@ -8,14 +8,14 @@
 
 **Building useful software — bots, tools and web apps, from idea to live product.**
 
-## Find me
+<p align="center">
+  <samp>$ cat ./findme.txt</samp>
+</p>
 
 <p align="center">
-  <samp>
-    <a href="https://t.me/ILIVIR3">→ ＣＨＡＮＮＥＬ　　t.me/ILIVIR3</a><br />
-    <a href="https://t.me/ILIV007">→ ＴＥＬＥＧＲＡＭ　t.me/ILIV007</a><br />
-    <a href="https://ilivir3.pages.dev">→ ＷＥＢＳＩＴＥ　　ilivir3.pages.dev</a><br />
-    <a href="mailto:ILIV007@proton.me">→ ＥＭＡＩＬ　　　　ILIV007@proton.me</a><br />
-    <a href="https://donate-iv.pages.dev">→ ＤＯＮＡＴＥ　　　donate-iv.pages.dev</a>
-  </samp>
+  <a href="https://t.me/ILIVIR3"><img src="./findme/telegram-channel.svg" width="64" alt="Telegram Channel" /></a>&nbsp;&nbsp;&nbsp;
+  <a href="https://t.me/ILIV007"><img src="./findme/telegram.svg" width="64" alt="Telegram" /></a>&nbsp;&nbsp;&nbsp;
+  <a href="https://ilivir3.pages.dev"><img src="./findme/website.svg" width="64" alt="Website" /></a>&nbsp;&nbsp;&nbsp;
+  <a href="mailto:ILIV007@proton.me"><img src="./findme/email.svg" width="64" alt="Email" /></a>&nbsp;&nbsp;&nbsp;
+  <a href="https://donate-iv.pages.dev"><img src="./findme/donate.svg" width="64" alt="Donate" /></a>
 </p>
