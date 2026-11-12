@@ -8,7 +8,7 @@
 
 **Building useful software — bots, tools and web apps, from idea to live product.**
 
-<p align="center">
+<p align="left">
   <samp>$ cat ./findme.txt</samp>
 </p>
 
