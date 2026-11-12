@@ -11,9 +11,9 @@
 ## Find me
 
 <p align="center">
-  <a href="https://t.me/ILIVIR3"><img src="./findme/telegram-channel.svg" width="240" alt="Telegram Channel" /></a>
-  <a href="https://t.me/ILIV007"><img src="./findme/telegram.svg" width="240" alt="Telegram" /></a>
-  <a href="https://ilivir3.pages.dev"><img src="./findme/website.svg" width="240" alt="Website" /></a>
-  <a href="mailto:ILIV007@proton.me"><img src="./findme/email.svg" width="240" alt="Email" /></a>
-  <a href="https://donate-iv.pages.dev"><img src="./findme/donate.svg" width="240" alt="Donate" /></a>
+  <a href="https://t.me/ILIVIR3"><img src="./findme/telegram-channel.svg" width="248" alt="Telegram Channel" /></a>
+  <a href="https://t.me/ILIV007"><img src="./findme/telegram.svg" width="248" alt="Telegram" /></a>
+  <a href="https://ilivir3.pages.dev"><img src="./findme/website.svg" width="248" alt="Website" /></a>
+  <a href="mailto:ILIV007@proton.me"><img src="./findme/email.svg" width="248" alt="Email" /></a>
+  <a href="https://donate-iv.pages.dev"><img src="./findme/donate.svg" width="248" alt="Donate" /></a>
 </p>
