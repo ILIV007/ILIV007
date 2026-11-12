@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#glow)">
+    <animate attributeName="opacity" values="1;0.72;1" begin="0.8s" dur="2.8s" repeatCount="indefinite"/>
+    <g transform="translate(20,6)" fill="none" stroke="#3fe0a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></g>
+  </g>
+  <text x="32" y="52" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" letter-spacing="1" fill="#8b85b8">WEBSITE</text>
+  <title>WEBSITE</title>
+</svg>
